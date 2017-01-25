@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9DAB23CA1D2B5E49249657C /* Pods_PlayReactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B989AAFF948D1E5D4F52638F /* Pods_PlayReactive.framework */; };
 		DCA3399A1E384081001E656D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA339991E384081001E656D /* AppDelegate.swift */; };
 		DCA3399C1E384081001E656D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA3399B1E384081001E656D /* ViewController.swift */; };
 		DCA3399F1E384081001E656D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA3399D1E384081001E656D /* Main.storyboard */; };
 		DCA339A11E384081001E656D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA339A01E384081001E656D /* Assets.xcassets */; };
 		DCA339A41E384081001E656D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA339A21E384081001E656D /* LaunchScreen.storyboard */; };
+		DCA339AC1E384154001E656D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA339AB1E384154001E656D /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E21CDDF407297102A63067D /* Pods-PlayReactive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayReactive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayReactive/Pods-PlayReactive.debug.xcconfig"; sourceTree = "<group>"; };
+		B989AAFF948D1E5D4F52638F /* Pods_PlayReactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayReactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFA1E15759C61088AD18562 /* Pods-PlayReactive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayReactive.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayReactive/Pods-PlayReactive.release.xcconfig"; sourceTree = "<group>"; };
 		DCA339961E384081001E656D /* PlayReactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayReactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA339991E384081001E656D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA3399B1E384081001E656D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		DCA339A01E384081001E656D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA339A31E384081001E656D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCA339A51E384081001E656D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA339AB1E384154001E656D /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9DAB23CA1D2B5E49249657C /* Pods_PlayReactive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB34A739D6E6352E202435DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E21CDDF407297102A63067D /* Pods-PlayReactive.debug.xcconfig */,
+				BBFA1E15759C61088AD18562 /* Pods-PlayReactive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE1657507E4F9C5A1ECE86FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B989AAFF948D1E5D4F52638F /* Pods_PlayReactive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCA3398D1E384081001E656D = {
 			isa = PBXGroup;
 			children = (
 				DCA339981E384081001E656D /* PlayReactive */,
 				DCA339971E384081001E656D /* Products */,
+				AB34A739D6E6352E202435DC /* Pods */,
+				CE1657507E4F9C5A1ECE86FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				DCA339A01E384081001E656D /* Assets.xcassets */,
 				DCA339A21E384081001E656D /* LaunchScreen.storyboard */,
 				DCA339A51E384081001E656D /* Info.plist */,
+				DCA339AB1E384154001E656D /* ViewModel.swift */,
 			);
 			path = PlayReactive;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCA339A81E384081001E656D /* Build configuration list for PBXNativeTarget "PlayReactive" */;
 			buildPhases = (
+				70D0E95D20129A5CFB607EEA /* [CP] Check Pods Manifest.lock */,
 				DCA339921E384081001E656D /* Sources */,
 				DCA339931E384081001E656D /* Frameworks */,
 				DCA339941E384081001E656D /* Resources */,
+				A933E8D57791C87066EF94C4 /* [CP] Embed Pods Frameworks */,
+				82FD9EB8DCB564B90A256F6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +162,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70D0E95D20129A5CFB607EEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82FD9EB8DCB564B90A256F6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayReactive/Pods-PlayReactive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A933E8D57791C87066EF94C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayReactive/Pods-PlayReactive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DCA339921E384081001E656D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DCA3399C1E384081001E656D /* ViewController.swift in Sources */,
+				DCA339AC1E384154001E656D /* ViewModel.swift in Sources */,
 				DCA3399A1E384081001E656D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +336,7 @@
 		};
 		DCA339A91E384081001E656D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E21CDDF407297102A63067D /* Pods-PlayReactive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BV8323W5J;
@@ -270,6 +350,7 @@
 		};
 		DCA339AA1E384081001E656D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBFA1E15759C61088AD18562 /* Pods-PlayReactive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BV8323W5J;
@@ -300,6 +381,7 @@
 				DCA339AA1E384081001E656D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,19 +7,39 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
+import Result
 
 class ViewController: UIViewController {
 
+    private let viewModel: ViewModelType = ViewModel()
+    @IBOutlet private weak var emojiLabel: UILabel!
+    @IBOutlet private weak var actionButton: UIButton!
+    @IBOutlet private weak var scoreLabel: UILabel!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        viewModel.outputs.emoji
+            .observeValues { [weak self] in
+                self?.emojiLabel.text = $0
+        }
+
+        viewModel.outputs.scoreAccessibilityLabel
+            .observeValues { [weak self] in
+                self?.scoreLabel.accessibilityLabel = $0
+        }
+
+        viewModel.outputs.scoreLabelText
+            .observeValues { [weak self] in
+                self?.scoreLabel.text = $0
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction private func actionButtonTapped() {
+        self.viewModel.inputs.actionButtonTapped()
     }
-
 
 }
 
